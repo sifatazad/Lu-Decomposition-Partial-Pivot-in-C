@@ -163,10 +163,6 @@ static void lu_decomposition_without_file(double **matrix, double *soln, const i
                 if (col_max==Abs(matrix[i][step])) {
                     double *temp= malloc(sizeof(double)*(n+1));
                     if (!temp) {
-                        for (int ii=0; ii<n; ii++) {
-                            free(matrix[ii]);
-                        }
-                        free(matrix);
                         return;
                     }
 
